@@ -1,0 +1,96 @@
+{
+    "$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#",
+    "contentVersion": "1.0.0.0",
+    "parameters": {
+        "webSiteName": {
+            "defaultValue": "L200OSSJavaSc1",
+            "type": "String"
+        },
+        "serverFarmName": {
+            "defaultValue": "ustxtempasp",
+            "type": "String"
+        },
+        "config_web_name": {
+            "defaultValue": "web",
+            "type": "String"
+        }
+    },
+    "variables": {
+	"repoURL_public": "https://PrashantPratap@bitbucket.org/PrashantPratap/l200.dev.slowperf.git",
+    "repoURL": "https://PrashantPratap:AAAAB3NzaC1yc2EAAAADAQABAAABAQDF+8oz2lzP0M2zQzP3qEeBv19var6BdFl3mXZ5MfWSMhWXlPn1GtCTX5DJdcwzm1eQF7UpN4c7b+eKy9//lePj8JzVFA0E/QrIcqDqkr+BNt5OND/it1qfP+H7s9vUP1BmUyPuEUQgsIdW9AntOqEdjCcUZkuP+1mWv7MC1Del6ICp2XYTmU1YHF/3celVOjNtxFXX/eVpUDXwnpGho0v6vGyZBJ5OtTD9LEKPHM03NGSFu63ut0X6JVmvDW1+5pInRQ+NdTxcI++I4k7ty/AI1zj0aOfeHrPmWnAaQoBfLIgLCbqBBOTkw223YOo6eT/2UOjj4F7YieH1OawyKV8L@bitbucket.org/PrashantPratap/l200.dev.slowperf.git",
+    "branch": "master"
+	},
+    "resources": [
+        {
+            "type": "Microsoft.Web/serverfarms",
+            "sku": {
+                "name": "S1",
+                "tier": "Standard",
+                "size": "S1",
+                "family": "S",
+                "capacity": 1
+            },
+            "kind": "app",
+            "name": "[parameters('serverFarmName')]",
+            "apiVersion": "2016-09-01",
+            "location": "[resourceGroup().location]",
+            "properties": {
+                "name": "[parameters('serverFarmName')]"
+            },
+            "dependsOn": []
+        },
+        {
+            "type": "Microsoft.Web/sites",
+            "kind": "app",
+            "name": "[parameters('webSiteName')]",
+            "apiVersion": "2016-08-01",
+            "location": "[resourceGroup().location]",
+            "properties": {                
+                "serverFarmId": "[resourceId('Microsoft.Web/serverfarms', parameters('serverFarmName'))]"                
+            },
+            "dependsOn": [
+                "[resourceId('Microsoft.Web/serverfarms', parameters('serverFarmName'))]"
+            ]
+        },
+		 {
+                    "apiVersion": "2015-08-01",
+                    "name": "web",
+                    "type": "sourcecontrols",
+                    "dependsOn": [
+                        "[resourceId('Microsoft.Web/Sites', variables('siteName'))]"
+                    ],
+                    "properties": {
+                        "RepoUrl": "[variables('repoURL')]",
+                        "branch": "[variables('branch')]",
+                        "IsManualIntegration": true
+                    }
+          },
+        {
+            "type": "Microsoft.Web/sites/config",
+            "name": "[concat(parameters('webSiteName'), '/', parameters('config_web_name'))]",
+            "apiVersion": "2016-08-01",
+            "location": "[resourceGroup().location]",            
+            "properties": {
+                "numberOfWorkers": 1,
+                "defaultDocuments": [
+                    "Default.htm",
+                    "Default.html",
+                    "Default.asp",
+                    "index.htm",
+                    "index.html",
+                    "iisstart.htm",
+                    "default.aspx",
+                    "index.php",
+                    "hostingstart.html"
+                ],
+                "use32BitWorkerProcess": false,
+                "javaVersion": "1.8",
+                "javaContainer": "TOMCAT",
+                "javaContainerVersion": "8.5"                
+            },
+            "dependsOn": [
+                "[resourceId('Microsoft.Web/sites', parameters('webSiteName'))]"
+            ]
+        }
+    ]
+}

@@ -1,0 +1,24 @@
+{
+    "$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+    "contentVersion": "1.0.0.0",
+    "parameters": {
+        "sites_ustxtmpl_name": {
+            "value": null
+        },
+        "serverfarms_ustxtempasp_name": {
+            "value": null
+        },
+        "config_web_name": {
+            "value": null
+        },
+        "hostNameBindings_ustxtmpl.azurewebsites.net_name": {
+            "value": null
+        },
+        "deployments_8ea5e0cf00c799bc925bd07aa50660443b2e83b8_name": {
+            "value": null
+        },
+        "deployments_91c7b4798ee20516b200907a2ac621c946ed3cba_name": {
+            "value": null
+        }
+    }
+}
