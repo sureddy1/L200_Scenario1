@@ -3,21 +3,18 @@
     "contentVersion": "1.0.0.0",
     "parameters": {
         "webSiteName": {
-            "defaultValue": "L200OSSJavaSc1",
             "type": "String"
         },
         "serverFarmName": {
-            "defaultValue": "ustxtempasp",
             "type": "String"
         },
         "config_web_name": {
-            "defaultValue": "web",
             "type": "String"
         }
     },
     "variables": {
-	"repoURL_public": "https://PrashantPratap@bitbucket.org/PrashantPratap/l200.dev.slowperf.git",
-    "repoURL": "https://PrashantPratap:AAAAB3NzaC1yc2EAAAADAQABAAABAQDF+8oz2lzP0M2zQzP3qEeBv19var6BdFl3mXZ5MfWSMhWXlPn1GtCTX5DJdcwzm1eQF7UpN4c7b+eKy9//lePj8JzVFA0E/QrIcqDqkr+BNt5OND/it1qfP+H7s9vUP1BmUyPuEUQgsIdW9AntOqEdjCcUZkuP+1mWv7MC1Del6ICp2XYTmU1YHF/3celVOjNtxFXX/eVpUDXwnpGho0v6vGyZBJ5OtTD9LEKPHM03NGSFu63ut0X6JVmvDW1+5pInRQ+NdTxcI++I4k7ty/AI1zj0aOfeHrPmWnAaQoBfLIgLCbqBBOTkw223YOo6eT/2UOjj4F7YieH1OawyKV8L@bitbucket.org/PrashantPratap/l200.dev.slowperf.git",
+	"repoURL_public": "https://sureddys@bitbucket.org/sureddys/l200javascenario1.git",
+    "repoURL": "https://sureddys:AAAAB3NzaC1yc2EAAAADAQABAAABAQDIVfbV0KV3MBxBPEAgSawyZgKQo480YhUIhLrh8LsxhcnVWKuRzSXKS4KI7S0X6j7NHYMtU2Vuqodwd1jPLAnbCx/XDwCLYVvsONzv2Qc4OimNGrNVx/ceNN3yumteiYDa4sicZUhIEcDVsA3d8AjA8DGifqj5r+IL/TAdQy3q11igfez+Na0xwMm4EpoYURWa8D7vTngetqcCXQYi2abidgIrB2hgiOrmEGCpnleEwZnNRZDz+KGtddab9EbUHQhG+Sm/u073ggPF9DBYLm9OXz8sFsv6bIjvZv9BLPiaFqMDNcfSmKQlwW3OwQEB6qiy9JmWtsRr944Bp7j78f75@bitbucket.org/sureddys/l200javascenario1.git",
     "branch": "master"
 	},
     "resources": [
