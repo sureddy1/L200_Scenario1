@@ -51,10 +51,11 @@
         },
 		 {
                     "apiVersion": "2015-08-01",
-                    "name": "web",
-                    "type": "sourcecontrols",
+                    "name": "[concat(parameters('webSiteName'), '/web')]",
+                    "type": "Microsoft.Web/sites/sourcecontrols",
+					"location": "[resourceGroup().location]",            
                     "dependsOn": [
-                        "[resourceId('Microsoft.Web/Sites', variables('siteName'))]"
+                        "[resourceId('Microsoft.Web/sites', parameters('webSiteName'))]"
                     ],
                     "properties": {
                         "RepoUrl": "[variables('repoURL')]",
