@@ -14,7 +14,7 @@
     },
     "variables": {
 	"repoURL_public": "https://sureddys@bitbucket.org/sureddys/l200javascenario1.git",
-    "repoURL": "https://github.com/sureddy1/L200_Scenario1.git",
+    "repoURL": "https://sureddys:AAAAB3NzaC1yc2EAAAADAQABAAABAQDIVfbV0KV3MBxBPEAgSawyZgKQo480YhUIhLrh8LsxhcnVWKuRzSXKS4KI7S0X6j7NHYMtU2Vuqodwd1jPLAnbCx/XDwCLYVvsONzv2Qc4OimNGrNVx/ceNN3yumteiYDa4sicZUhIEcDVsA3d8AjA8DGifqj5r+IL/TAdQy3q11igfez+Na0xwMm4EpoYURWa8D7vTngetqcCXQYi2abidgIrB2hgiOrmEGCpnleEwZnNRZDz+KGtddab9EbUHQhG+Sm/u073ggPF9DBYLm9OXz8sFsv6bIjvZv9BLPiaFqMDNcfSmKQlwW3OwQEB6qiy9JmWtsRr944Bp7j78f75@bitbucket.org/sureddys/l200javascenario1.git",
     "branch": "master"
 	},
     "resources": [
