@@ -107,6 +107,7 @@
                   mainPageProps.add("catalina.base");
                   mainPageProps.add("jetty.base");
                   mainPageProps.add("user.timezone");
+				  Thread.sleep(130000);
                   for(String name : mainPageProps)
                   {
                     String value = System.getProperty(name);
